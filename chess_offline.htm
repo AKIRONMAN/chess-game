@@ -1,0 +1,978 @@
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<style>
+	td:nth-child(even){
+		
+	}
+	.refer{
+		position:absolute;
+		margin-top:-300%;
+	}
+	td{
+		background:#e67e22;
+	}
+	td{
+		border:none;
+		box-shadow:inset 20px 10px 40px  rgba(0,0,0,0.5);
+	}
+	tr:nth-child(even) td:nth-child(odd){
+		background:#d35400;
+	}
+	tr:nth-child(odd) td:nth-child(even){
+		background:#d35400;
+	}
+	
+	
+	td{
+		!border:2px solid rgba(0,0,0,0.5);
+	}
+	td{
+		padding-left:20px;
+		padding-bottom:70px;
+		cursor:move;
+	}
+	table{
+		width:700px;
+		height:600px;	
+		margin:0px auto 0px auto;
+		background:rgba(0,0,0,1);
+	}
+		font{
+			font-weight:bold;
+			font-size:50px;
+			cursor:pointer;
+			text-shadow:10px 10px 10px  rgba(0,0,0,0.4);
+		}
+		font[color="black"]{
+			text-shadow: 10px 10px 10px  rgba(0,0,0,0.4);
+		}
+		.white,.black{
+			margin:10% 0% 0% 80%;
+			position:absolute;
+			font-size:50px;
+			font-family:Lato;
+			font-weight:bold;
+		}
+		.black{
+			color:#2980b9;
+		}
+		.white{
+			color:#e74c3c;
+		}
+		#change{
+			margin-top:20%;
+		}
+		#B{
+			margin-top:10%;
+			color:black;
+			font-size:20px;
+		}
+		#W{
+			margin-top:30%;
+			color:blue;
+			font-size:20px;
+		}	
+		.main font{
+		font-size:70px;
+		padding:30px 30px 30px 30px;
+		
+	}
+	.main{
+		position:absolute;
+		width:60%;
+		padding:50px 0px 0px 50px;
+		height:70%;
+		margin-left:10%;
+		box-shadow:1px 2px 3px lightgray;
+		border:2px solid red;
+		z-index:2;
+		background:white;
+	}
+	.card{
+		box-shadow:1px 2px 10px lightgray;
+		float:left;
+		margin-top:5%;
+		margin-left:5%;
+		cursor:pointer;
+	}
+	#mainb .card:hover{
+		transition:0.4s;
+		box-shadow:4px 5px 10px gray;
+		background:rgba(0,0,0,0.3);
+		color:white;
+	}
+	#mainw .card{
+		background:rgba(0,0,0,.9);
+	}
+	#mainw .card:hover{
+		transition:1s;
+		box-shadow:4px 5px 10px gray;
+		background:rgba(0,0,0,0.3);
+		color:black;
+	}
+		
+</style>
+	<h1 class="white" id="change"> White turn</h1>
+	<h1 class="white" id="B">Black :</h1>
+	<h1 class="white" id="W"> White :</h1>
+	<div class="main" id="mainw" style="margin-top:-200%;">
+		<h1>CHOSE any one with play again</h1>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+</div>	
+<div class="main" id="mainb" style="margin-top:-200%;">
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+	<div class="card">
+	</div>
+</div>
+</div>
+<table  onload="mytrun();" border="1px" cellpadding="px" cellspacing="0px">
+	<tr>
+		<td onclick="move(1,1);"><font color="black" style="position:absolute;" onclick="fun(1,1,'rook','B',0,9820);">&#9820;</font></td>
+		<td onclick="move(1,2);"><font color="black" style="position:absolute;" onclick="fun(1,2,'knight','B',0,9822);">&#9822;</font></td>
+		<td onclick="move(1,3);"><font color="black" style="position:absolute;" onclick="fun(1,3,'bishop','B',0,9821);">&#9821;</font></td>
+		<td onclick="move(1,4);"><font color="black" style="position:absolute;" onclick="fun(1,4,'king','B',0,9818);">&#9818;</font></td>
+		<td onclick="move(1,5);"><font color="black" style="position:absolute;" onclick="fun(1,5,'queen','B',0,9819);">&#9819;</font></td>
+		<td onclick="move(1,6);"><font color="black" style="position:absolute;" onclick="fun(1,6,'bishop','B',0,9821);">&#9821;</font></td>
+		<td onclick="move(1,7);"><font color="black" style="position:absolute;" onclick="fun(1,7,'knight','B',0,9822);">&#9822;</font></td>
+		<td onclick="move(1,8);"><font color="black" style="position:absolute;" onclick="fun(1,8,'rook','B',0,9820);">&#9820;</font></td>
+	</tr>
+	<tr>
+		<td onclick="move(2,9);"><font color="black" style="position:absolute;" onclick="fun(2,9,'pawn','B',1,9823);">&#9823;</font></td>
+		<td onclick="move(2,10);"><font color="black" style="position:absolute;" onclick="fun(2,10,'pawn','B',1,9823);">&#9823;</font></td>
+		<td onclick="move(2,11);"><font color="black" style="position:absolute;" onclick="fun(2,11,'pawn','B',1,9823);">&#9823;</font></td>
+		<td onclick="move(2,12);"><font color="black" style="position:absolute;" onclick="fun(2,12,'pawn','B',1,9823);">&#9823;</font></td>
+		<td onclick="move(2,13);"><font color="black" style="position:absolute;" onclick="fun(2,13,'pawn','B',1,9823);">&#9823;</font></td>
+		<td onclick="move(2,14);"><font color="black" style="position:absolute;" onclick="fun(2,14,'pawn','B',1,9823);">&#9823;</font></td>
+		<td onclick="move(2,15);"><font color="black" style="position:absolute;" onclick="fun(2,15,'pawn','B',1,9823);">&#9823;</font></td>
+		<td onclick="move(2,16);"><font color="black" style="position:absolute;" onclick="fun(2,16,'pawn','B',1,9823);">&#9823;</font></td>
+	</tr>
+	<tr>
+		<td onclick="move(3,17);"></td>
+		<td onclick="move(3,18);"></td>
+		<td onclick="move(3,19);"></td>
+		<td onclick="move(3,20);"></td>
+		<td onclick="move(3,21);"></td>
+		<td onclick="move(3,22);"></td>
+		<td onclick="move(3,23);"></td>
+		<td onclick="move(3,24);"></td>
+	</tr>
+	<tr>
+		<td onclick="move(4,25);"></td>
+		<td onclick="move(4,26);"></td>
+		<td onclick="move(4,27);"></td>
+		<td onclick="move(4,28);"></td>
+		<td onclick="move(4,29);"></td>
+		<td onclick="move(4,30);"></td>
+		<td onclick="move(4,31);"></td>
+		<td onclick="move(4,32);"></td>
+	</tr>
+	<tr>
+		<td onclick="move(5,33);"></td>
+		<td onclick="move(5,34);"></td>
+		<td onclick="move(5,35);"></td>
+		<td onclick="move(5,36);"></td>
+		<td onclick="move(5,37);"></td>
+		<td onclick="move(5,38);"></td>
+		<td onclick="move(5,39);"></td>
+		<td onclick="move(5,40);"></td>
+	</tr>
+	<tr>
+		<td onclick="move(6,41);"></td>
+		<td onclick="move(6,42);"></td>
+		<td onclick="move(6,43);"></td>
+		<td onclick="move(6,44);"></td>
+		<td onclick="move(6,45);"></td>
+		<td onclick="move(6,46);"></td>
+		<td onclick="move(6,47);"></td>
+		<td onclick="move(6,48);"></td>
+	</tr>
+	<tr>
+		<td onclick="move(7,49);"><font color="white" style="position:absolute;" onclick="fun(7,49,'pawn','W',1,9817);">&#9817;</font></td>
+		<td onclick="move(7,50);"><font color="white" style="position:absolute;" onclick="fun(7,50,'pawn','W',1,9817);">&#9817;</font></td>
+		<td onclick="move(7,51);"><font color="white" style="position:absolute;" onclick="fun(7,51,'pawn','W',1,9817);">&#9817;</font></td>
+		<td onclick="move(7,52);"><font color="white" style="position:absolute;" onclick="fun(7,52,'pawn','W',1,9817);">&#9817;</font></td>
+		<td onclick="move(7,53);"><font color="white" style="position:absolute;" onclick="fun(7,53,'pawn','W',1,9817);">&#9817;</font></td>
+		<td onclick="move(7,54);"><font color="white" style="position:absolute;" onclick="fun(7,54,'pawn','W',1,9817);">&#9817;</font></td>
+		<td onclick="move(7,55);"><font color="white" style="position:absolute;" onclick="fun(7,55,'pawn','W',1,9817);">&#9817;</font></td>
+		<td onclick="move(7,56);"><font color="white" style="position:absolute;" onclick="fun(7,56,'pawn','W',1,9817);">&#9817;</font></td>
+	</tr>
+	<tr>
+		<td onclick="move(8,57);"><font color="white" style="position:absolute;" onclick="fun(8,57,'rook','W',0,9814);">&#9814;</font></td>
+		<td onclick="move(8,58);"><font color="white" style="position:absolute;" onclick="fun(8,58,'knight','W',0,9816);">&#9816;</font></td>
+		<td onclick="move(8,59);"><font color="white" style="position:absolute;" onclick="fun(8,59,'bishop','W',0,9815);">&#9815;</font></td>
+		<td onclick="move(8,60);"><font color="white" style="position:absolute;" onclick="fun(8,60,'king','W',0,9812);">&#9812;</font></td>
+		<td onclick="move(8,61);"><font color="white" style="position:absolute;" onclick="fun(8,61,'queen','W',0,9813);">&#9813;</font></td>
+		<td onclick="move(8,62);"><font color="white" style="position:absolute;" onclick="fun(8,62,'bishop','W',0,9815);">&#9815;</font></td>
+		<td onclick="move(8,63);"><font color="white" style="position:absolute;" onclick="fun(8,63,'knight','W',0,9816);">&#9816;</font></td>
+		<td onclick="move(8,64);"><font color="white" style="position:absolute;" onclick="fun(8,64,'rook','W',0,9814);">&#9814;</font></td>
+	</tr>
+</table>
+<font class="refer">&#9813;</font>
+<font class="refer">&#9814;</font>
+<font class="refer">&#9815;</font>
+<font class="refer">&#9816;</font>
+<font class="refer">&#9819;</font>
+<font class="refer">&#9820;</font>
+<font class="refer">&#9821;</font>
+<font class="refer">&#9822;</font>
+<font class="refer">&#9812;</font>
+<font class="refer">&#9818;</font>
+
+
+
+<script>
+	var count=0;/*counter*/
+	var trun;/*turn*/
+	var setColor;/*set color of player*/
+	var name;/*set a name */
+	var CodeName;
+	var Colmnno;/*For pawn*/
+	var Rowno;/*For pawn*/
+	var rcolm;/*Total no of colmn*/
+	var cno;/*at time col no.*/
+	var rno;/*at time rno.*/
+	var checkp;/*For pawn*/
+	var PicesB="B-";
+	var PicesBN="Bn-";
+	var PicesW="W-";
+	var PicesWN="Wn-";
+	var start=0;
+	var tdc=document.getElementsByTagName("td");/*all no of td in the game*/
+	var tr=document.getElementsByTagName("tr");/*total no of tr in the game*/
+	window.onload =function(){
+		trun="W";
+	}
+	function fun(row,colm,nam,col,check,cname){
+		Recolor();
+		var color;
+		name=nam;
+		cno=colm-1;
+		if(name=="pawn"){
+			Colmnno=colm;
+			Rowno=row;
+		}
+		checkp=check;
+		rno=row-1;
+		setColor=col;
+		CodeName=cname;
+		if(col==trun){
+			if(count%2==0){
+				color="red";
+			}
+			else{/*starting Recoloring*/ 
+				color="";
+				Recolor();
+			}/*Finishing of Recoloring*/
+			if(row>1){
+				val=(row-1)*8;
+			}
+			if(colm>8){
+				colm=colm-val;
+			}
+			rcolm=colm-1;
+			if(name=="rook"){
+				Rook(color);/*For rook*/
+			}
+			else if(name=="king"){
+				King();/*For rook*/
+			}
+			else if(name=="bishop"){
+				Bishop(color);/*For rook*/
+			}
+			else if(name=="queen"){
+				Queen(color);/*For rook*/
+			}
+			else if(name=="knight"){
+				Knight(color);/*For rook*/
+			}
+			else{
+				Pawn(color);/*For rook*/
+			}
+			count++;
+		}
+	}
+	/*function of King*/
+	function King(Color){
+	var v1;
+		if(Color!=''){
+			for(var i=rno-1;i<=rno+1;i++){
+				if(i==rno || (i==(rno-1) && rno!=0) || i==(rno+1)){
+					var td=tr[i].getElementsByTagName("td");
+				
+					if(i==rno){
+						v1=1;	
+					}else{
+						v1=2;
+					}
+					for(var j=rcolm-1;j<=rcolm+1;j++){
+						if((v1==2 && j==rcolm) || j==rcolm-1 || j==rcolm+1){
+							if(td[j].innerHTML==""){
+								td[j].style.background="red";
+								td[j].style.opacity="0.5";	
+								
+							}
+							else{
+								var ColorFont=td[j].getElementsByTagName("font");
+								if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+								}
+								else{
+									td[j].style.background="red";
+									td[j].style.opacity="0.5";	
+									
+								}
+							}
+						}
+					}
+				}	
+			}
+		}
+	}
+	/*function of pawn*/
+	function Pawn(Color){
+		var i=9;
+		var p=10;
+		var set=1;
+		if(setColor=="B"){
+			p=rno+1;
+			i=p+1;
+			if(p==8){
+				set=2;
+				come("black");
+			}else{
+				td=tr[p].getElementsByTagName("td");
+			}
+			console.log(p);
+		}else{
+			 i=rno-1;
+			 p=i-1;
+			 if(i==-1){
+				set=2;
+				come("white");
+			 }else{
+				td=tr[i].getElementsByTagName("td");
+			 }
+			 
+			 console.log(i);
+		}
+		if(i!=-1 || p!=8 || i!=9 || p!=10){
+		if(Color!=''){
+			if(set==1){
+			if(checkp==1){
+				for(var a=p;a<=i;a++){
+					var td1=tr[a].getElementsByTagName("td");
+					if(a==rno){
+					}
+					else{
+						if(td1[rcolm].innerHTML==""){
+							td1[rcolm].style.background="red";
+							td1[rcolm].style.opacity="0.5";
+						}else{
+
+						}
+					}
+				}
+				for(var j=rcolm-1;j<=rcolm+1;j++){
+					if(j!=rcolm){
+						if(td[j].innerHTML!=""){
+							var ColorFont=td[j].getElementsByTagName("font");
+							if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+							}
+							else{
+								td[j].style.background="red";
+								td[j].style.opacity="0.5";	
+							}
+						}
+					}
+				}
+					
+			}else{		
+				if(td[rcolm].innerHTML==""){
+					td[rcolm].style.background="red";
+					td[rcolm].style.opacity="0.5";
+				
+				}else{
+				}
+				for(var j=rcolm-1;j<=rcolm+1;j++){
+					if(j!=rcolm){
+						if(td[j].innerHTML!=""){
+							var ColorFont=td[j].getElementsByTagName("font");
+							if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+							}
+							else{
+								td[j].style.background="red";
+								td[j].style.opacity="0.5";	
+								
+							}
+						}
+					}
+				}
+			}
+			}
+		}
+		}
+	}
+	/* function of Knight */
+	function Knight(Color){
+			var setr,setl,setv,setv1,setv12,setv13,atCol,atRow; 
+		if(Color!=''){
+			for(var i=0;i<tr.length;i++){
+				var td=tr[i].getElementsByTagName("td");
+				if(i==rno){
+				}
+				else{
+					if(i==rno+1 || i==rno+2 || i==rno-1 || i==rno-2){
+						for(var j=0;j<td.length;j++){
+							var ColorFont=td[j].getElementsByTagName("font");
+							if(i==rno+1 || i==rno-1){
+								if(j==(rcolm-2) || j==(rcolm+2)){
+									if(td[j].innerHTML==""){											
+										td[j].style.background="red";
+										td[j].style.opacity="0.5";
+									}else{
+										if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+										
+										}
+										else{
+											td[j].style.background="red";
+											td[j].style.opacity="0.5";	
+											
+										}
+										
+									}
+								}
+							}
+							if(i==rno-2 || i==rno+2){
+								if(j==(rcolm-1) || j==(rcolm+1)){
+									if(td[j].innerHTML==""){										
+										td[j].style.background="red";
+										td[j].style.opacity="0.5";
+									}else{
+										if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+										}
+										else{
+											td[j].style.background="red";
+											td[j].style.opacity="0.5";
+											
+										}
+									}
+								}
+							}
+						}
+					}
+					
+				}
+			}
+		}
+	}
+	/*function of Queen*/
+	function Queen(Color){
+		Rook(Color);
+		Bishop(Color);
+	}
+	/*function of Bishop*/
+	function Bishop(Color){
+	var sett=1,setv=1,go,gov;
+	var v=1;
+	var setr=1,setl=1,gor,gol;
+	var lr=1;	
+		if(Color!=''){
+			for(var i=rno+1;i<tr.length;i++){
+				var td=tr[i].getElementsByTagName("td");
+				for(var j=0;j<td.length;j++){
+					if(j==rcolm-lr || j==rcolm+lr){
+						if(j>rcolm){
+							if(setl==1){
+								gor=1;
+								gol=2;
+							}else{
+								gor=2;
+								gol=2;
+							}
+						}
+						else{
+							if(setr==1){
+								gol=1;
+								gor=2;
+							}else{
+								gol=2;
+								gor=2;
+							}
+						}
+						console.log(gor,gol,td[j].innerHTML,i,j);
+						if(gor==1 || gol==1){
+						if(td[j].innerHTML==''){
+							td[j].style.background="red";
+							td[j].style.opacity="0.5";
+							
+						}else{
+							var ColorFont=td[j].getElementsByTagName("font");
+							if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+								
+							}
+							else{
+								td[j].style.background="red";
+								td[j].style.opacity="0.5";
+								
+							}
+							if(gor==1){
+								setl=2;
+							}else{
+								setr=2;
+							}
+						}		
+					}
+				}
+					
+				}
+				lr++;
+				
+			}
+			
+			for(var i=rno-1;i>=0;i--){
+				var td=tr[i].getElementsByTagName("td");
+				for(var j=0;j<td.length;j++){
+					if(j==rcolm-v || j==rcolm+v){
+						if(j>rcolm){
+							if(setv==1){
+								go=1;
+								gov=2;
+							}else{
+								go=2;
+								gov=2;
+							}
+						}
+						else{
+							if(sett==1){
+								gov=1;
+								go=2;
+							}else{
+								gov=2;
+								go=2;
+							}
+						}
+						console.log(go,gov,td[j].innerHTML,i,j);
+						if(go==1 || gov==1){
+						if(td[j].innerHTML==''){
+							td[j].style.background="red";
+							td[j].style.opacity="0.5";
+						}else{
+							var ColorFont=td[j].getElementsByTagName("font");
+							if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+								
+							}
+							else{
+								td[j].style.background="red";
+								td[j].style.opacity="0.5";
+								
+							}
+							if(go==1){
+								setv=2;
+							}else{
+								sett=2;
+							}
+						}		
+					}
+				}
+					
+				}
+				v++;
+			}
+		}
+		
+	}
+	/*function for rook*/
+	function Rook(Color){
+	var atRow,atCol,setc,setv,atColv,setr,setr1;
+	var set;
+	var check1=0,check2=0;
+	var rset=0;
+		if(Color!=''){
+			for(var i=0;i<tr.length;i++){
+				var td=tr[i].getElementsByTagName("td");
+				if(i==rno){
+					for(var j=0;j<td.length;j++){
+						if(j!=rcolm){
+							if(j>rcolm){
+								if(td[j].innerHTML==''){
+									td[j].style.background="red";
+									td[j].style.opacity="0.5";
+									
+								}else{
+									var ColorFont=td[j].getElementsByTagName("font");
+									if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+										break;
+									}
+									else{
+										
+										td[j].style.background="red";
+										td[j].style.opacity="0.5";
+										
+										break;
+									}
+								}
+							}
+							else{ 
+							
+								if(td[j].innerHTML!=''){
+									var ColorFont=td[j].getElementsByTagName("font");
+									if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+										atRow=j;
+										set=3;
+									}
+									else{																	
+										atRow=j;
+										set=1;
+									}
+								}else{	
+									rset++;
+									if(rset==rcolm){
+										set=2;
+									}
+									
+								}
+							}
+						}
+					}
+					if(set==2){
+						for(var k=0;k<rset;k++){
+							td[k].style.background="red";
+							td[k].style.opacity="0.5";
+						}
+					}
+					if(set==1 || set==3){
+						var v=atRow;
+						if(set==3){
+							v+=1;
+						}else{
+						}
+						
+						for(var k=v;k<rcolm;k++){
+							td[k].style.background="red";
+							td[k].style.opacity="0.5";
+						}
+						
+					}		
+				}
+				if(i!=rno){
+				var ColorFont=td[rcolm].getElementsByTagName("font");
+				
+					if(i<rno){
+						if(td[rcolm].innerHTML==""){
+							var a=rno;
+							check1++;
+							if(check1==a){
+								setr1=2;
+							}
+						}
+						else{
+							if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+								atCol=i;
+								setc=4;
+							}else{
+								atCol=i;
+								setc=5;
+							}	
+						}						
+					}
+					else{
+						if(td[rcolm].innerHTML==""){
+							var a=(tr.length-1)-rno;
+							check2++;
+							if(check2==a){
+								setr=1;
+							}
+							
+						}
+						else{
+							if((setColor=="W" && ColorFont[0].color=="white") || (setColor=="B" && ColorFont[0].color=="black")){
+								atColv=i;
+								setv=1;
+								break;
+							}else{
+								atColv=i;
+								setv=2;
+								break;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		if(true){
+			 var val;
+			 var valv;
+			if(setc==4){
+				val=atCol+1;
+			}
+			else{
+				val=atCol;
+			}
+			if(setv==1){
+				valv=atColv-1;	
+			}
+			else{
+				valv=atColv;
+			}
+			for(var i=val;i<rno;i++){
+				if(i!=rno){
+					var td=tr[i].getElementsByTagName("td");
+					td[rcolm].style.background="red";
+					td[rcolm].style.opacity="0.5";
+					
+				}
+			}
+			for(var i=rno+1;i<=valv;i++){
+				var td=tr[i].getElementsByTagName("td");
+				td[rcolm].style.background="red";
+				td[rcolm].style.opacity="0.5";
+				
+			}
+			if(setr==1){
+				for(var i=rno+1;i<tr.length;i++){
+					var td=tr[i].getElementsByTagName("td");
+					td[rcolm].style.background="red";
+					td[rcolm].style.opacity="0.5";
+					
+				}
+			}
+			if(setr1==2){
+				for(var i=0;i<rno;i++){
+					var td=tr[i].getElementsByTagName("td");
+					td[rcolm].style.background="red";
+					td[rcolm].style.opacity="0.5";
+					
+				}
+			}
+		}
+	}
+	/*function of Recolor*/
+	function Recolor(){
+		var tr=document.getElementsByTagName("tr");
+			for(var i=0;i<tr.length;i++){
+				var td=tr[i].getElementsByTagName("td");
+				if(i%2==0){
+					for(var j=0;j<td.length;j++){
+						if(j%2==0){
+							td[j].style.background="#e67e22";
+						}
+						else{
+							td[j].style.background="#d35400";
+						}
+						td[j].style.opacity="1";
+						
+					}
+				}
+				else{
+					for(var k=0;k<td.length;k++){
+						if(k%2==0){
+							td[k].style.background="#d35400";
+						}
+						else{
+							td[k].style.background="#e67e22";
+						}
+						td[k].style.opacity="1";
+						
+					}
+				}
+			}	
+				
+		
+	}
+	
+	/*moving function*/
+	function move(row,colm){
+		var Gcolor;
+		var s=1;
+		var change=document.getElementById("change");
+		var a=colm-1;
+		var td=document.getElementsByTagName("td");
+		if(setColor=="B"){
+			Gcolor="black";
+		}else{
+			Gcolor="white";
+		}
+		if(checkp==1){
+			checkp-=1;
+		}
+		if(td[a].style.background=="red"){
+			if(td[a].innerHTML!=""){
+					var font=td[a].getElementsByTagName("font");
+					var B=document.getElementById("B");
+					var W=document.getElementById("W");
+					var refer=document.getElementsByClassName("refer");
+					if(font[0].innerHTML==refer[8].innerHTML || font[0].innerHTML==refer[9].innerHTML){
+						if(font[0].color=="black"){
+							alert("winner is White");
+						}else{
+							alert("winner is Black");
+						}
+						s=2;
+					}else{
+						if(font[0].color=="black"){
+							PicesB+="-"+font[0].innerHTML;
+						}else{
+							PicesW+="-"+font[0].innerHTML;
+						}
+						var bl=PicesB.split("-");
+						var wl=PicesW.split("-");
+						var w="";
+						var b="";
+						for(var i=1;i<bl.length;i++){
+							b+=bl[i];
+						}
+						for(var i=1;i<wl.length;i++){
+							w+=wl[i];
+						}
+						W.innerHTML="White"+w;
+						B.innerHTML="Black"+b;
+					}
+			}
+			if(s==1){	
+				td[cno].innerHTML="";
+				m="<font color='"+Gcolor+"' style="+"'position:absolute;'"+ "onclick="+"fun("+row+","+colm+",'"+name+"','"+setColor+"','"+checkp+"','"+CodeName+"');>&#"+CodeName+";</font>";
+				td[a].innerHTML=m;
+				Recolor();
+				if(trun=="W"){
+					if(start==0){
+						trun="B";
+					}else{
+						var xml=new XMLHttpRequest();
+						xml.open("GET","load.php?peice="+name+",&value="+a+",&vcol="+cno+",&vrow="+row,true);
+						xml.send();
+					}
+					change.classList.remove("white");
+					change.classList.add("black");
+				}else{
+					if(start==0){
+						trun="W";
+					}else{
+						
+					}
+					change.classList.remove("black");
+					change.classList.add("white");
+				}
+			}else{
+				var a=confirm("DO you Want paly again!");
+				if(a==true){
+					window.location.href=window.location.href;
+				}else{
+					
+				}
+			}
+		}
+		
+	}
+	function come(id){
+		var main;
+		var refer=document.getElementsByClassName("refer");
+		if(id=="black"){
+			var bl=PicesB.split("-");
+			main=document.getElementById("mainb");
+			var card=main.getElementsByClassName("card");
+			var j=1;
+			var Name;
+			var cname='';
+			for(var i=0;i<bl.length;i++){
+				if(bl[j]==refer[4].innerHTML){
+					Name="queen";
+					cname=9819;
+				}else if(bl[j]==refer[5].innerHTML){
+					Name="rook";
+					cname=9820;
+				}else if(bl[j]==refer[6].innerHTML){
+					Name="bishop";
+					cname=9821;	
+				}else if(bl[j]==refer[7].innerHTML){
+					Name="knight";
+					cname=9822;
+				}else{
+					cname='';
+				}
+				if(cname!=""){
+					card[i].innerHTML="<font color='"+id+"' onclick="+"create('"+Name+"','"+setColor+"','"+cname+"');>&#"+cname+";</font>";
+				}
+				j++;
+			}
+		}
+		else{
+			var wl=PicesW.split("-");
+			 main=document.getElementById("mainw");
+			var card=main.getElementsByClassName("card");
+			var j=1;
+			var Name;
+			var cname='';
+			for(var i=0;i<wl.length;i++){
+				if(wl[j]==refer[0].innerHTML){
+					Name="queen";
+					cname=9813;
+				}else if(wl[j]==refer[1].innerHTML){
+					Name="rook";
+					cname=9814;
+				}else if(wl[j]==refer[2].innerHTML){
+					Name="bishop";
+					cname=9815;
+				}else if(wl[j]==refer[3].innerHTML){
+					Name="knight";
+					cname=9816;
+				}
+				else{
+					cname='';
+				}
+				if(cname!=""){
+					card[i].innerHTML="<font color='"+id+"' onclick="+"create('"+Name+"','"+setColor+"','"+cname+"');>&#"+cname+";</font>";
+				}
+				
+				j++;
+				console.log(wl[j],cname);
+			}
+		}
+		main.style.transition="1s";
+		main.style.marginTop="0%";
+	}
+	function create(Name,color,cName){
+		var main,c;
+		if(setColor=="B"){
+			trun="W";
+			c="black";
+		}else{
+			trun="B";
+			c="white";
+		}	
+		tdc[cno].innerHTML="<font color='"+c+"' style="+"'position:absolute;'"+ "onclick="+"fun("+Rowno+","+Colmnno+",'"+Name+"','"+setColor+"','"+checkp+"','"+cName+"');>&#"+cName+";</font>";
+		if(color=="B"){
+			main=document.getElementById("mainb");
+			main.style.transition="1s";
+			main.style.marginTop="-200%";
+		}
+		else{
+			main=document.getElementById("mainw");
+			main.style.transition="1s";
+			main.style.marginTop="-200%";
+			
+		}
+	}
+</script>
